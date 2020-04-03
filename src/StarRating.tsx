@@ -50,7 +50,7 @@ const StarRating: React.FC<StarRatingProps> = ({
       const defaultIndex = initialRating % 1 === 0 ? initialRating - 1 : Math.floor(initialRating);
       setSelectedStarIndex(defaultIndex);
     }
-  }, []);
+  }, [initialRating]);
 
   const handleStarMouseMove = useCallback((offsetX: number, index) => {
     if(isReadOnly)
